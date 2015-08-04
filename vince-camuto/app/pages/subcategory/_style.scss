@@ -1,0 +1,280 @@
+// SubCategory List
+// ===
+//
+// This contains styling for subcategory list page
+.t-subCategory-list {
+    padding: 9px 10px 18px;
+    font-family: $blair-ITC-light;
+    position: relative;
+    h1 {
+        font-family: $moderno-FB;
+        font-size: $font-size-large-16;
+        font-weight: normal;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .c-filter-section,
+    .brand-listing-banner.notbranded {
+      display: none;
+    }
+    .section-header {
+        text-align: center;
+        padding-top: 2px;
+        font-family: $font-family;
+        a {
+            color: $black;
+        }
+    }
+    .search-result-header {
+        text-align: center;
+        p {
+            padding-top: 5px;
+            margin-bottom: 2px;
+            font-family: $font-family;
+        }
+    }
+    .breadcrumb {
+        background: $grey-160;
+        font-family: $font-family;
+        font-size: $font-size-small-12;
+        color: $black-10;
+        margin-bottom: 13px;
+        padding: 2px 11px;
+        .breadcrumb-divider {
+            display: inline-block;
+            padding: 0px 10px;
+        }
+        a {
+            color: $black-10;
+            letter-spacing: 1px;
+        }
+        a.breadcrumb-last {
+            color: $grey-120;
+        }
+    }
+    .c-refinementValue {
+        margin-top: -5px;
+        padding-bottom: 15px;
+        .breadcrumb-refinement-value {
+            display: inline-block;
+            margin: 3px 0;
+            margin-right: 4px;
+            padding: 4px 32px 0px 10px;
+            background-color: #f3f3f3;
+            position: relative;
+            height: 31px;
+        }
+        .breadcrumb-relax {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            @include icon-font;
+            &::before {
+                content: icon-address(close);
+                position: absolute;
+                top: 2px;
+                right: 4px;
+                font-size: 18px;
+                color: #b4b4b4;
+            }
+        }
+        .removelink {
+            font-size: 0;
+        }
+    }
+    .brand-listing-banner {
+        padding-bottom: 10px;
+        margin-top: -5px;
+    }
+    .search-result-content {
+        border-bottom: 1px $grey-70 solid;
+        padding-bottom: 4px;
+        ul {
+            display: table;
+        }
+        li {
+            vertical-align: top;
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            padding: 0px 2px 16px;
+        }
+        .product-image {
+            padding-bottom: 3px;
+        }
+        .product-image a {
+            display: block;
+        }
+        .product-name {
+            line-height: 11px;
+            font-size: $font-size-small-10;
+            font-weight: bold;
+            padding-bottom: 4px;
+        }
+        .product-pricing {
+            font-size: $font-size-small-12;
+            font-family: $font-family;
+        }
+        .product-discounted-price,
+        .product-onsale-indicator {
+            color: $red-10;
+        }
+        .product-discounted-price {
+            span {
+                display: inline-block;
+                padding: 0px 2px;
+            }
+        }
+        .product-standard-price {
+            color: $grey-120;
+            text-decoration: line-through;
+        }
+        .product-onsale-indicator, .swatches-toggle {
+            font-family: $blair-ITC-light;
+        }
+        .product-onsale-indicator {
+            font-size: $font-size-small-10;
+            font-weight: bold;
+        }
+        .product-swatches {
+            padding-top: 8px;
+        }
+        .swatches-toggle {
+            background: $grey-60;
+            font-size: $font-size-small-9;
+            font-weight: bold;
+            margin: 0 auto;
+            padding-top: 1px;
+            height: 17px;
+            width: 102px;
+        }
+        .swatch-list-wrapper {
+            display: none;
+        }
+    }
+    .swatch-list-wrapper, .html-slot-container  {
+        display: none;
+    }
+    .no-results {
+        clear: both;
+        padding: 0px 10px 5px;
+        text-align: center;
+        font-family: $font-family;
+        line-height: 18px;
+    }
+    .no-hits-search {
+        padding: 23px 0px 20px;
+        input::-webkit-input-placeholder {
+            color: $grey-110;
+        }
+        input[type="text"] {
+            border-right: none;
+            padding: 0px 10px 0px;
+            font-size: $font-size-large-16;
+            border-radius: 0px;
+            color: $black;
+            width: 86.666%;
+            height: 40px;
+            float: left;
+        }
+        button {
+            border-radius: 0px;
+            border: none;
+            width: 13.333%;
+            height: 40px;
+            background: $black;
+            float: left;
+            padding: 0;
+            font-size: 0px;
+            @include icon-font;
+            &::before {
+                content: icon-address(search);
+                font-size: $font-size-large-30;
+                color: $white;
+                position: relative;
+                bottom: 2px;
+            }
+        }
+        button:active {
+            background: rgba(0, 0, 0, 0.85);
+        }
+    }
+
+    // VC-86: Add review stars
+    // ---
+    //
+    // Notes:
+    //
+    // 1. Override desktop style specificity
+    // 2. Override inline styles
+
+    .pr-snippet-stars {
+        float: none;
+
+        padding: 0;
+    }
+
+    .pr-stars {
+        float: none !important; // 1
+
+        width: 83px;
+        height: 12px;
+        margin: 0 auto;
+
+        background-image: url("../images/StarsSprite.png") !important; // 1
+        background-size: 83px 166px;
+
+        &.pr-stars-0-sm {
+            background-position: left top !important; // 2
+        }
+        &.pr-stars-0_5-sm {
+            background-position: left -15px !important; // 2
+        }
+        &.pr-stars-1-sm {
+            background-position: left -30px !important; // 2
+        }
+        &.pr-stars-1_5-sm {
+            background-position: left -46px !important; // 2
+        }
+        &.pr-stars-2-sm {
+            background-position: left -62px !important; // 2
+        }
+        &.pr-stars-2_5-sm {
+            background-position: left -77px !important; // 2
+        }
+        &.pr-stars-3-sm {
+            background-position: left -93px !important; // 2
+        }
+        &.pr-stars-3_5-sm {
+            background-position: left -108px !important; // 2
+        }
+        &.pr-stars-4-sm {
+            background-position: left -123px !important; // 2
+        }
+        &.pr-stars-4_5-sm {
+            background-position: left -138px !important; // 2
+        }
+        &.pr-stars-5-sm {
+            background-position: left -154px !important; // 2
+        }
+    }
+
+    .pr-snippet-review-count,
+    .pr-snippet-read-write,
+    .pr-clear,
+    .pr-snippet-social-bar,
+    .pr-snippet-rating-decimal {
+        display: none !important; // 1
+    }
+}
+
+
+// Sub Category Product Tiles
+// ---
+
+.t-subCategoryList__product {
+    color: inherit; // override default link styling
+}

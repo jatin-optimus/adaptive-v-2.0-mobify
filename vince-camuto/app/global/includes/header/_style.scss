@@ -1,0 +1,216 @@
+// Header Section
+// ===
+//
+// This contains styling for header section
+.t-header {
+    position: relative;
+
+    .c-menu a {
+        display: block;
+    }
+    .c-headerContent {
+        padding: 0px 4px;
+        height: 60px;
+        text-align: center;
+        border-bottom: 1px $grey-70 solid;
+        > * {
+            float: left;
+        }
+    }
+    // Styling for minicart section
+    //
+    .mini-cart-content{
+        display: none;
+    }
+    .c-nav {
+        @include icon-font;
+        color: $black;
+        margin-top: 6px;
+        width: 50px;
+        &::before {
+            content: icon-address(drawerIcon);
+            position: relative;
+            font-size: 32px;
+        }
+    }
+    .c-logo {
+        float: none;
+        display: inline-block;
+        padding-top: 15px;
+        .c-brandLogo {
+            background: url("../img/logoHeader.png") 0px 0px no-repeat;
+            background-size: 128px 30px;
+            width: 128px;
+            height: 30px;
+            float: left;
+        }
+        .c-brandLogo.men {
+            background: url("../img/men.png") 0px 0px no-repeat;
+            background-size: 52px 16px;
+            width: 52px;
+            height: 16px;
+            margin-top: 7px;
+        }
+        .c-brandLogo.vcsignature {
+            background: url("../img/vcSignature.png") 0px 0px no-repeat;
+            background-size: 127px 20px;
+            width: 127px;
+            height: 20px;
+            margin-top: 6px;
+        }
+        .c-brandLogo.louise {
+            background: url("../img/lousise-et-Cie.png") 0px 0px no-repeat;
+            background-size: 130px 15px;
+            width: 130px;
+            height: 15px;
+            margin-top: 7px;
+        }
+        .c-brandLogo.twobyvc {
+            background: url("../img/two.png") 0px 0px no-repeat;
+            background-size: 130px 25px;
+            width: 130px;
+            height: 25px;
+            margin-top: 3px;
+        }
+        span {
+            float: left;
+            height: 20px;
+            border-left: 1px $grey-70 solid;
+            @include icon-font;
+            color: $black;
+            margin-top: 5px;
+            margin-left: 10px;
+            &:before {
+                content: icon-address(right-chevron);
+                position: relative;
+                font-size: $font-size-large-20;
+                font-weight: bold;
+                top: -5px;
+                left: 5px;
+            }
+        }
+    }
+    .c-activeBrand {
+        span {
+            &:before {
+                content: icon-address(down-chevron);
+            }
+        }
+    }
+    // Styling for My Bag section
+    //
+    .c-myBag {
+        float: right;
+        margin-top: 8px;
+        position: relative;
+        width: 50px;
+        @include icon-font;
+        &::before {
+            content: icon-address(bagIcon);
+            position: relative;
+            font-size: $font-size-large-30;
+            color: $grey-70;
+        }
+    }
+    .c-myBag.c-active {
+        &::before {
+            color: $black;
+        }
+    }
+    .c-myBag .mini-cart-total {
+        position: absolute;
+        right: 0;
+        top: 0;
+        a {
+            display: block;
+            width: 50px;
+            height: 45px;
+        }
+    }
+    a span.mini-cart-label {
+        position: absolute;
+        top: 25px;
+        left: 21px;
+        background: black;
+        color: white;
+        height: 13px;
+        width: 20px;
+        font-size: 11px;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 13px;
+    }
+    .c-brandNav {
+        background: $grey-80;
+        text-align: center;
+        box-shadow: 0px 8px 10px rgba($black, 0.4);
+        top: 60px;
+        display: none;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        ul {
+            padding: 7px 0px 14px;
+        }
+        a  {
+            display: block;
+            color: $black;
+            line-height: 27px;
+        }
+        li {
+            padding: 15px 0;
+        }
+        .c-homeLink {
+            padding: 0px;
+            font-family: $blair-ITC-light;
+            font-weight: bold;
+            a {
+                padding: 13px 0px 6px;
+            }
+        }
+        li.active {
+            background: $grey-90;
+            a {
+                opacity: 0.2;
+            }
+        }
+        .vcsignature {
+            padding: 11px 0px;
+        }
+        .louise {
+            padding: 19px 0px;
+        }
+        .twobyvc {
+            padding: 11px 0px;
+        }
+        .men {
+            padding: 22px 0;
+        }
+        // Styling for NBrand Navigation section
+        .vincecamuto a {
+            background: url("../img/vinceComuto.png") center top no-repeat;
+            background-size: 212px 30px;
+            height: 30px;
+        }
+        .vcsignature a {
+            background: url("../img/vcSignature.png") center top no-repeat;
+            background-size: 166px 24px;
+            height: 24px;
+        }
+        .louise a {
+            background: url("../img/lousise-et-Cie.png") center top no-repeat;
+            background-size: 135px 15px;
+            height: 15px;
+        }
+        .twobyvc a {
+            background: url("../img/two.png") center top no-repeat;
+            background-size: 197px 40px;
+            height: 40px;
+        }
+        .men a {
+            background: url("../img/men.png") center top no-repeat;
+            background-size: 52px 16px;
+            height: 16px;
+        }
+    }
+}

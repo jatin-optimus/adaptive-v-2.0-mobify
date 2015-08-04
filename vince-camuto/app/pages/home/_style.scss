@@ -1,0 +1,42 @@
+// Home page
+// ===
+//
+// This contains styling for home page
+.t-homeContent {
+    padding: 8px 0px 10px;
+    // font-family: $blair-ITC-light;
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    p {
+        margin: 0;
+    }
+    a  {
+        display: block;
+    }
+    .brand-menu-wrapper {
+        padding: 5px 10px;
+    }
+    .brand-menu-wrapper .all-brands {
+        display: none;
+    }
+    .brand-menu-wrapper li {
+        padding: 5px 0px;
+        a {
+            // border: 1px $black solid;
+            // font-size: $font-size-large-16;
+            font-weight: bold;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: $black;
+            &:active {
+                background: $black;
+                color: $white;
+            }
+        }
+    }
+}

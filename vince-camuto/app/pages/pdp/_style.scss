@@ -1,0 +1,539 @@
+// .t-pdpPage {
+  .t-product-detail {
+    padding: 11px 10px 20px;
+    position: relative;
+
+    // Added display none as on desktop this divs should be hidden
+    // as per desktop.
+    //
+    // Code Review
+    // - replace these selectors with a `u-hide` class in the markup
+    .c-name-wrapper .value,
+    // Code Review
+    // - avoid ID selectors
+    #selectColorErrorMsg,
+    #selectSizeErrorMsg,
+    // Code Review
+    // - a `.visually-hidden` class should not be set to `display: none`
+    .visually-hidden,
+    .product-add-to-cart .input-text,
+    .product-add-to-cart .bt-dropdown-options,
+    .c-review-star .pr-snippet-read-write,
+    .c-review-star .pr-snippet-rating-decimal {
+        display: none;
+    }
+    // Code Review
+    // - this should be neither camelcase nor dash-space
+    // - this component should be moved to the `/components` directory
+    // - this is one of two times this component is being styled (see ShoppingCart.scss)
+    .c-breadCrumb {
+        background: $grey-160;
+        margin-bottom: 9px;
+        font-size: $font-size-small-12;
+        padding: 2px 11px;
+        a, .breadcrumb-divider {
+            float: left;
+            color: $black;
+        }
+        a:last-child {
+            color: $grey-140;
+        }
+        .breadcrumb-divider {
+            padding: 0px 10px;
+        }
+    }
+    // Code Review
+    // - avoid ID selectors
+    #selectColorErrorMsg, #selectSizeErrorMsg {
+        color: $redError;
+        position: relative;
+        top: -9px;
+    }
+    // Code Review
+    // - this component class would be better replaced by a sub-template class
+    .c-name-wrapper {
+        float: left;
+        width: 60%;
+        h1 {
+            font-size: $font-size-large-16;
+            font-family: $moderno-FB;
+            font-style: italic;
+            font-weight: normal;
+            padding-bottom: 5px;
+        }
+        div {
+            color: $black-10;
+        }
+    }
+    // Code Review
+    // - this desktop class would be better replaced by a sub-template class
+    .product-price {
+        float: right;
+        .product-onsale-indicator {
+            text-align: right;
+            font-family: $blair-ITC-light;
+            font-size: $font-size-small-12;
+            font-weight: bold;
+            color: $red-10;
+            margin-top: -3px;
+            padding-bottom: 2px;
+        }
+        span {
+            display: inline-block;
+        }
+        .price-standard {
+            text-decoration: line-through;
+            font-size: $font-size-small-12;
+        }
+        .price-standard + span {
+            color: $red-10;
+        }
+    }
+    // Code Review
+    // - this component class would be better replaced by a sub-template class
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    .c-pdpImage .product-image {
+        display: block;
+        position: relative;
+    }
+    // Code Review
+    // - this component should be moved to the `/components` directory
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    .c-imageZoom {
+        font-size: $font-size-small-12;
+        font-family: $blair-ITC-light;
+        position: absolute;
+        text-decoration: underline;
+        color: $black;
+        right: 0px;
+        top: 0px;
+        padding: 5px 15px;
+    }
+    // Code Review
+    // - this component class would be better replaced by a sub-template class
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    .c-pdpImage {
+        padding: 10px 0px 15px;
+        position: relative;
+    }
+    // Code Review
+    // - this component should be moved to the `/components` directory
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    .c-bulletPagination {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        bottom: 37px;
+    }
+    // Code Review
+    // - All `.m-scooch-*` classes should be styled in the
+    //   `/components/vendor/_scooch.scss` file
+    .m-scooch-bulleted {
+        display: inline-block;
+        padding: 4px 5px 4px 0;
+        background: rgba($white, 0.7);
+        border-radius: 20px;
+    }
+    .m-scooch-bulleted a {
+        border: 1px $black-20 solid;
+        width: 9px;
+        height: 9px;
+        float: left;
+        margin: 0px 0px 0px 5px;
+        padding: 0;
+        border-radius: 9px;
+        background: $white;
+        box-shadow: none;
+    }
+    .m-scooch-bulleted .m-active {
+        background: $black-20;
+        box-shadow: none;
+    }
+    // Code Review
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    // - this `img` styling can be in the same block as the above `.c-pdpImage` block
+    .c-pdpImage img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    // Code Review
+    // - this component class would be better replaced by a sub-template class
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    .c-reviewSection {
+        padding-bottom: 7px;
+        // Code Review
+        // - this component should be moved to the `/components` directory
+        .c-logoSmall {
+            background: url("../images/logoVice.png") 0px 0px no-repeat;
+            background-size: 19px 20px;
+            width: 19px;
+            height: 20px;
+            float: left;
+        }
+        // Code Review
+        // - this component class would be better replaced by a sub-template class
+        .c-review-star {
+            float: right;
+            text-align: right;
+        }
+        .c-review-star p {
+            margin: 0;
+        }
+        .c-review-star .pr-snippet-review-count {
+            margin-top: 4px;
+            font-size: $font-size-small-12;
+        }
+    }
+    // TODO: move rating stars in components.
+    .pr-stars {
+        background: url("../images/StarsSprite.png") no-repeat;
+        background-size: 114px 227px;
+        width: 114px;
+        height: 16px;
+    }
+    .pr-stars-0-sm, .pr-stars-0 {
+        background-position: 0px 0px !important;
+    }
+    .pr-stars-0_5-sm, .pr-stars-0_5 {
+        background-position: 0px -21px !important;
+    }
+    .pr-stars-1-sm, .pr-stars-1 {
+        background-position: 0px -43px !important;
+    }
+    .pr-stars-1_5-sm, .pr-stars-1_5 {
+        background-position: 0px -64px !important;
+    }
+    .pr-stars-2-sm, .pr-stars-2 {
+        background-position: 0px -85px !important;
+    }
+    .pr-stars-2_5-sm, .pr-stars-2_5 {
+        background-position: 0px -106px !important;
+    }
+    .pr-stars-3-sm, .pr-stars-3 {
+        background-position: 0px -127px !important;
+    }
+    .pr-stars-3_5-sm, .pr-stars-3_5 {
+        background-position: 0px -148px !important;
+    }
+    .pr-stars-4-sm, .pr-stars-4 {
+        background-position: 0px -169px !important;
+    }
+    .pr-stars-4_5-sm, .pr-stars-4_5 {
+        background-position: 0px -190px !important;
+    }
+    .pr-stars-5-sm, .pr-stars-5 {
+        background-position: 0px -211px !important;
+    }
+    .availability-block .coming-soon {
+        margin-bottom: 5px;
+        font-family: $blair-ITC-light;
+        font-size: $font-size-small-12;
+        font-weight: bold;
+        a {
+            color: $red-10;
+        }
+    }
+    // Code Review
+    // - this component should be moved to the `/components` directory
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    .c-productVariations {
+          transform: translateZ(0);
+        a {
+            color: $black;
+        }
+        .size-guide {
+            float: right;
+            font-size: $font-size-small-12;
+            text-decoration: underline;
+            font-family: $blair-ITC-light;
+        }
+        .product-tabs, .product-price,
+        .favorite-review-row, h1,
+        ul div:not([class]) {
+            display: none;
+        }
+    }
+    // Code Review
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    // - this block could be combined with the one above
+    .c-productVariations .value {
+        padding: 14px 0px 16px;
+        li {
+            border: 1px $grey-70 solid;
+            font-size: $font-size-large-16;
+            font-family: $blair-ITC-light;
+            text-align: center;
+            float: left;
+            margin: 0px 10px 10px 0px;
+        }
+        li.selected {
+            border-color: $black;
+        }
+        .size li.selected {
+            background: $black;
+        }
+        .size li.selected a {
+            color: $white;
+        }
+        .unselectable {
+            border-color: $grey-150;
+        }
+        .size li.unselectable {
+            background: url("../images/unselected.png") 0px 0px no-repeat;
+            background-size: 58px 38px;
+        }
+        .size li.unselectable a {
+            color: $grey-140;
+        }
+        .size li a[title="1 SIZE"] {
+            font-size: $font-size-small-13;
+        }
+        .Color li.selected {
+            position: relative;
+            &:after {
+                content: '';
+                background: url("../images/imageupArrow.png") 0px 0px no-repeat;
+                background-size: 15px 7px;
+                position: absolute;
+                width: 15px;
+                height: 7px;
+                left: 50%;
+                bottom: 0;
+                margin-left: -7.5px;
+            }
+        }
+        .Color li.unselectable {
+            position: relative;
+            &:before {
+                content: '';
+                background: url("../images/unselected.png") 0px 0px no-repeat;
+                background-size: 58px 38px;
+                position: absolute;
+                width: 58px;
+                height: 38px;
+                left: 0px;
+                top: 0px;
+            }
+            a {
+                opacity: 0.2;
+            }
+        }
+        img {
+            display: none;
+        }
+        a {
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: 60px 60px !important;
+            display: block;
+            width: 58px;
+            height: 38px;
+            line-height: 38px;
+            font-weight: bold;
+        }
+    }
+    // Code Review
+    // - this desktop class would be better replaced by a sub-template class
+    .product-add-to-cart {
+        padding-bottom: 30px;
+        transform: translateZ(0);
+        fieldset {
+            margin: 0;
+        }
+        .inventory {
+            float: left;
+            width: 43.333%;
+        }
+        .bt-dropdown {
+            position: relative;
+        }
+        .in-stock-msg {
+            margin-bottom: 13px;
+        }
+        .AddtoBag {
+            background: $black;
+            border: none;
+            font-size: $font-size-large-16;
+            font-family: $blair-ITC-light;
+            padding: 0;
+            text-transform: uppercase;
+            color: $white;
+            float: right;
+            width: 53.333%;
+            height: 40px;
+        }
+        .AddtoBag:active {
+            background: rgba($black, 0.85);
+        }
+        select {
+            -webkit-appearance: none;
+            position: relative;
+            border-radius: 0px;
+            height: 40px;
+            padding: 0px 5px 0px;
+            z-index: 2;
+            font-size: 0px;
+            opacity: 0;
+        }
+        select:focus + a {
+            border-color: $black;
+        }
+        select option {
+            font-size: $font-size;
+        }
+        .bt-dropdown-toggle {
+            background: $white;
+            border: 1px $grey-70 solid;
+            font-family: $blair-ITC-light;
+            font-size: $font-size-large-16;
+            position: absolute;
+            height: 40px;
+            line-height: 40px;
+            width: 100% !important;
+            padding: 0px 10px;
+            left: 1px;
+            top: 0;
+        }
+        .bt-dropdown-toggle:after {
+            content: '';
+            background: url("../images/quantity_icon.png") 0px 0px no-repeat;
+            background-size: 15px 8px;
+            position: absolute;
+            width: 15px;
+            height: 8px;
+            right: 10px;
+            top: 17px;
+        }
+    }
+    // Code Review
+    // - this component class would be better replaced by a sub-template class
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    // - a lot of `transform: translateZ(0)` being used, but not clear why
+    // - most of this block appears dedicated to giving bellows its design.
+    //   This might be a good candidate for a new component
+    .c-accordianSection {
+        transform: translateZ(0);
+        // Code Review
+        // - this is one of three places this vendor class is being styled (see
+        //   orderConfirmation.scss and productDetail.scss)
+        // - bellows should be styled in `/vendor/_bellows.scss`
+        .bellows {
+            border-bottom: 1px $grey-70 solid;
+        }
+        .bellows,
+        .bellows__item {
+            transform: translateZ(0);
+        }
+        .bellows__header {
+            font-family: $blair-ITC-light;
+            border-top: 1px $grey-70 solid;
+            font-size: $font-size-large-16;
+            padding: 13px 10px 15px;
+            @include icon-font;
+            color: $black;
+            position: relative;
+        }
+        .bellows__header:before {
+            content: icon-address(right-chevron);
+            font-size: $font-size-large-30;
+            position: absolute;
+            right: 10px;
+            top: 3px;
+        }
+        .bellows--is-open .bellows__header:before {
+            content: icon-address(down-chevron);
+        }
+        .bellows__content {
+            border-top: 1px $black solid;
+            padding: 15px 10px;
+            transform: translateZ(0);
+            .tab-content {
+                p {
+                    margin: 2px 0px 0px 0px;
+                }
+            }
+        }
+        .bellows__content-wrapper {
+            transform: translateZ(0);
+        }
+        .c-customerReview {
+            padding-top: 20px;
+        }
+        // Code Review
+        // - This block could probably just be combined with `.c-pdpSocial` below
+        .bellows__content.c-pdpSocial {
+            padding: 5px 10px;
+        }
+    }
+    // Code Review
+    // - this component class would be better replaced by a sub-template class
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    .c-productDetail {
+        line-height: 18px;
+        li {
+            background: url("../images/detailDotIcon.png") 0px 7px no-repeat;
+            background-size: 5px;
+            margin-top: 4px;
+            padding-left: 18px;
+            list-style: none;
+        }
+        li:first-child {
+            margin-top: 9px;
+        }
+        p {
+            margin: 2px 0px 0px -18px;
+        }
+    }
+    // Code Review
+    // - this component class would be better replaced by a sub-template class
+    // - the camelCase class should be dash-spaced or be sub-classed with `__`
+    .c-pdpSocial {
+        text-align: center;
+        background: $grey-60;
+        li {
+            display: inline-block;
+            margin: 0 6%;
+            width: 10%;
+        }
+        a {
+            display: block;
+            @include icon-font;
+            color: $black;
+            &:before {
+                position: relative;
+                font-size: 32px;
+            }
+        }
+        .shareWithFriend a {
+            &:before {
+                content: '';
+                background: url("../images/mailIcon.png") center center no-repeat;
+                background-size: 25px 16px;
+                width: 25px;
+                height: 48px;
+            }
+        }
+        .facebook a {
+            &:before {
+                content: icon-address(facebook);
+            }
+        }
+        .pinterest a {
+            &:before {
+                content: icon-address(pinterest);
+            }
+        }
+        .twitter a {
+            &:before {
+                content: icon-address(twitter);
+            }
+        }
+        .yt a {
+            &:before {
+                content: icon-address(youTube);
+            }
+        }
+    }
+}

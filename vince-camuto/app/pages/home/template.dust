@@ -1,0 +1,22 @@
+{>"global/base"/}
+
+{<contentBlock}
+    <div class="t-homeContent">
+        {productImages}
+This is new line
+    </div>
+
+{/contentBlock}
+
+{<uiScripts}
+    <script>
+    // Note: Add any JavaScript that should be run on this page into
+    // app/pages/home/ui.js
+    (function(require) {
+        require(["global/ui", "pages/home/ui"], function(globalUI, homeUI) {
+            globalUI();
+            homeUI();
+        });
+    })(Adaptive.AMD.require);
+    </script>
+{/uiScripts}

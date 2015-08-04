@@ -1,0 +1,26 @@
+{>"global/base"/}
+{<contentBlock}
+    <div class="t-subCategory-list" id="main">
+        {productImages}
+    </div>
+    <div class="c-fixedOverlay">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+            <div class="c-loadingText">Loading...</div>
+        </div>
+    </div>
+{/contentBlock}
+
+{<uiScripts}
+    <script>
+    // Note: Add any JavaScript that should be run on this page into
+    // app/pages/subcategory/ui.js
+    (function(require) {
+        require(["global/ui", "pages/subcategory/ui"], function(globalUI, subCategoryListUI) {
+            globalUI();
+            subCategoryListUI();
+        });
+    })(Adaptive.AMD.require);
+    </script>
+{/uiScripts}

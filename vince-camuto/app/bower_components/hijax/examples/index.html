@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hijax Example</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <h1>Hijax</h1>
+
+    <h2>This container will be populated with AJAX:</h2>
+    <!-- Desktop code will populate data here -->
+    <div id="ajax-container"></div>
+
+    <div class="log" data-request="1">
+        <h2>Request 1</h2>
+    </div>
+
+    <div class="log" data-request="2">
+        <h2>Request 2</h2>
+    </div>
+
+    <script data-main="assets/js/main" src="../bower_components/requirejs/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.c-newsletter {
+    padding-bottom: 8px;
+    margin-top: 12px;
+    form {
+        margin-top: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+    input[type="email"] {
+        border-radius: 0;
+        height: 40px;
+        padding: 0px 10px;
+        width: 71.666%;
+    }
+    input[type="submit"] {
+        font-family: $blair-ITC-light;
+        background: $black;
+        border-radius: 0px;
+        padding: 0px 0px 3px;
+        border: none;
+        width: 25%;
+        height: 40px;
+        color: $white;
+        font-size: $font-size-large-16;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    span.error {
+        display: block;
+        font-family: $font-family;
+        color: $redError;
+        padding-top: 4px;
+    }
+    input[type="submit"]:active {
+        background: rgba($black, 0.85);
+    }
+}

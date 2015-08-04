@@ -1,0 +1,26 @@
+{#footer}
+    <footer class="t-footer" role="contentinfo">
+        <div class="c-shippingBanner {shippingBanner.class}">{shippingBanner.footerBanner}</div>
+        {>"components/newsletter/template"/}
+        <div class="c-socialLinks">
+            <ul>
+                {#socialLinks}
+                    {instagram}
+                    {facebook}
+                    {twitter}
+                    {pinterest}
+                    {youtube}
+                {/socialLinks}
+            </ul>
+        </div>
+        <div class="c-contactLink">
+            <span>Contact Us:</span>
+            <a href="tel:{@translate key="tel_number"/}">{@translate key="tel_number"/}</a>
+        </div>
+        <!--<div class="c-find-store">{findStoreLink}</div>-->
+        <div class="c-copyRight">
+            <a href="{homeLink}"><img src="{@getUrl path="img/logoVice.png" /}" /></a>
+            <span>{@translate key="copy_right"/}</span>
+        </div>
+    </footer>
+{/footer}

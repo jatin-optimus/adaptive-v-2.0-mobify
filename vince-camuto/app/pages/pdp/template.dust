@@ -1,0 +1,89 @@
+{>"global/base"/}
+
+{<contentBlock}
+    <div id="wrapper" class="t-product-detail pt_product-details">
+        <div class="c-breadCrumb">{breadCrumb}</div>
+        <div id="primary" class="c-productSummary clrfix">
+            {#productSummary}
+                <div class="c-name-wrapper">
+                    {productName}
+                    {styleCode}
+                </div>
+                {productPrice}
+            {/productSummary}
+        </div>
+        <div class="m-scooch m-fluid m-scooch-photos c-pdpImage clrfix">
+            <div class="m-scooch-inner clrfix">
+                {#productScooch.image}
+                    <div class="m-item m-active">
+                        <div class="c-imageZoom needsclick">{@translate key="zoom" /}</div>
+                        <div class="c-zoomWrapper">{.}</div>
+                    </div>
+                {/productScooch.image}
+            </div>
+            <div class="c-bulletPagination">
+                {?productScooch.counter}
+                    <div class="m-scooch-controls m-scooch-bulleted">
+                        {#productScooch.counter}
+                            <a href="#" data-m-slide="{.}"></a>
+                        {/productScooch.counter}
+                    </div>
+                {/productScooch.counter}
+            </div>
+        </div>
+        <div id="pdpMain" class="pdp-main">
+            <div class="c-reviewSection clrfix">
+                <div class="c-logoSmall"></div>
+                <div class="c-review-star needsclick">{reviewSection}</div>
+            </div>
+            <div class="c-productVariations clrfix product-detail">
+                <div id="product-content">{productVariations}{addToCartSection}</div>
+            </div>
+        </div>
+        <div class="c-accordianSection">
+            <div class="bellows c-product-detail__bellows">
+                <div class="bellows__item">
+                    <div class="bellows__header">{@translate key="detail" /}</div>
+                    <div class="bellows__content c-productDetail">{accordianSection.productDetail}</div>
+                </div>
+                <div class="bellows__item product-reviews-wrapper">
+                    <div class="bellows__header">{@translate key="customer_reviews" /}</div>
+                    <div class="bellows__content c-customerReview"></div>
+                </div>
+                <div class="bellows__item">
+                    <div class="bellows__header">{@translate key="share" /}</div>
+                    <div class="bellows__content c-pdpSocial">{accordianSection.shareWithFriend}</div>
+                </div>
+            </div>
+        </div>
+        <div class="c-itemAdded" hidden>
+            <div class="c-pinnyTitle">{@translate key="item_added" /}</div>
+            <div class="c-addedItem clrfix">
+                <div class="c-addedItemImage"></div>
+                <div class="c-addedItemName"></div>
+            </div>
+            <a class="c-checkout" href="/mybag">{@translate key="checkout" /}</a>
+            <div class="pinny__close c-continueShopping">{@translate key="continue_shopping" /}</div>
+        </div>
+        <div class="c-fixedOverlay">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+                <div class="c-loadingText">Loading...</div>
+            </div>
+        </div>
+    </div>
+{/contentBlock}
+
+{<uiScripts}
+    <script>
+    // Note: Add any JavaScript that should be run on this page into
+    // app/pages/pdp/ui.js
+    (function(require) {
+        require(["global/ui", "pages/pdp/ui"], function(globalUI, pdpUI) {
+            globalUI();
+            pdpUI();
+        });
+    })(Adaptive.AMD.require);
+    </script>
+{/uiScripts}

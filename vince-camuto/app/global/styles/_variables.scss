@@ -1,0 +1,195 @@
+// Project-Wide Variables
+// ===
+//
+// Edit these as needed. Some guidelines:
+//
+// - Names should be lowercase and dash-separated;
+// - Qualifiers should be added to the beginning of related variables: use
+//   `$small-font-size`, not `$font-size-small`;
+// - Numeric scales should use increments of 10; these numbers are arbitrary and
+//   should not map to actual values. If really necessary, additional values can
+//   be added in between, e.g. $neutral-15 between 10 and 20.
+
+
+// Layout
+// ---
+
+// Basic unit for spacing and alignment; 6 to 12px recommended. Apply in whole
+// or half multiples.
+$unit: 10px;
+
+// Standard tap-target size
+$tap-size: 45px;
+
+
+// Typography
+// ---
+$sans-serif: "Arial", sans-serif;
+$serif: Georgia, Times, "Times New Roman", serif;
+
+$blair-ITC-light: 'BlairITCStd-Light';
+$blair-ITC-bold: 'BlairITCStd';
+$moderno-FB: "Moderno FB";
+$moderno-FB-light: "Moderno FB Light";
+$moderno-FB-semibold: "Moderno FB Semibold";
+
+$font-family: $sans-serif;
+$header-font-family: $font-family;
+$font-size: 14px;
+$line-height: 20px;
+
+$font-size-small-9: 9px;
+$font-size-small-10: 10px;
+$font-size-small-11: 11px;
+$font-size-small-12: 12px;
+$font-size-small-13: 13px;
+$font-size-small-14: 14px;
+$font-size-large-15: 15px;
+$font-size-large-16: 16px;
+$font-size-large-17: 17px;
+$font-size-large-18: 18px;
+$font-size-large-20: 20px;
+$font-size-large-21: 21px;
+$font-size-large-22: 22px;
+$font-size-large-24: 24px;
+$font-size-large-25: 25px;
+$font-size-large-30: 30px;
+$font-size-large-31: 31px;
+
+// ICONS
+// ----------
+$icon-font: 'vince-camuto-icons';
+$icon-font-path: '../fonts/icons/#{$icon-font}';
+$icon-list: (
+     search: '\E609',
+     right-chevron: '\ea01',
+     cart: '\ea02',
+     down-chevron: '\ea03',
+     close: '\EA04',
+     facebook: '\ea05',
+     pinterest: '\ea08',
+     twitter: '\ea11',
+     youTube: '\ea12',
+     instagram: '\ea06',
+     drawerIcon: '\ea07',
+     bagIcon: '\ea10'
+);
+
+
+// Color palette
+// ---
+$white: #ffffff;
+
+$black: #000000;
+$black-10: #1e1e1e;
+$black-20: #4a4643;
+$black-30: #555555;
+$black-40: #010101;
+
+// Neutrals
+$grey-10: #ecf0f1;
+$grey-20: #bdc3c7;
+$grey-30: #95a5a6;
+$grey-40: #7f8c8d;
+$grey-50: #343839;
+$grey-60: #f2f2f2;
+$grey-70: #e5e5e5;
+$grey-80: #f9f9f9;
+$grey-90: #f1f1f1;
+$grey-100: #e3e3e3;
+$grey-110: #cccccc;
+$grey-120: #bbbbbb;
+$grey-130: #bfbfbf;
+$grey-140: #d9d9d9;
+$grey-150: #dddddd;
+$grey-160: #f5f5f5;
+$grey-170: #919191;
+$grey-180: #e0e0e0;
+$grey-190: #e9e9e9;
+$grey-200: #b3b3b3;
+
+// Neutrals
+$neutral-30: #e8e8e8;
+$neutral-40: #bbb;
+$neutral-50: #888;
+$neutral-60: #555;
+$neutral-70: #333;
+
+$red-10: #ff1493;
+$red-20: #fae8e5;
+
+// Brand colors
+$brand-color: #3498db; // blue
+$light-brand-color: lighten($brand-color, 15%);
+$dark-brand-color: darken($brand-color, 15%);
+
+// Accent colors
+$accent-color: #16a085; // turquoise
+$light-accent-color: lighten($accent-color, 15%);
+$dark-accent-color: darken($accent-color, 15%);
+
+// Success colors
+$success-color: #27ae60; // green
+$light-success-color: lighten($success-color, 15%);
+$dark-success-color: darken($success-color, 15%);
+
+// Error colors
+$error-color: #c0392b; // red
+$light-error-color: lighten($error-color, 15%);
+$dark-error-color: darken($error-color, 15%);
+$error-color: #c0392b; // red
+$light-error-color: lighten($error-color, 60);
+$dark-error-color: darken($error-color, 60);
+$redError: #fa3016;
+
+
+// Gradients
+// ---
+//
+// Note: Spline provides a handy function for reversing a gradient,
+// e.g. `reverse-gradient($neutral-gradient)`;
+
+$neutral-gradient: linear-gradient(white, $neutral-30);
+$brand-gradient: linear-gradient($light-brand-color, $brand-color);
+$accent-gradient: linear-gradient($light-accent-color, $accent-color);
+
+
+// Appearance
+// ---
+
+$font-color: $neutral-70;
+
+$link-color: $accent-color;
+$active-link-color: $dark-accent-color;
+
+$focus-color: $accent-color;
+
+$border-color: $neutral-40;
+$border-radius: 4px;
+
+$input-background-color: #fff;
+$disabled-input-color: $neutral-40;
+$disabled-input-background-color: $neutral-30;
+$horizontal-input-padding: $unit;
+$vertical-input-padding: $unit;
+
+
+// Layer (z-index)
+// ---
+
+// Organizes z-index usage by name. Values can be incremented/decremented
+// slightly as necessary. eg. $stage-layer + 1;
+
+$backdrop-layer:  1;    // background
+$stage-layer:     10;   // icon or other ui element
+$orchestra-layer: 100;  // modal shade or similar
+$frontrow-layer:  1000; // modal dialog or similar
+
+
+// Shorthand
+// ---
+//
+// Quick ways to write properties that you re-use often.
+
+$border: 1px solid $border-color;
+$input-padding: $vertical-input-padding $horizontal-input-padding;

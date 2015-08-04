@@ -1,0 +1,21 @@
+{#header}
+    <header class="t-header" role="banner">
+        <div class="c-headerContent clrfix">
+            <div class="m-pikabu-nav-toggle c-nav" data-role="left"></div>
+            <div class="c-logo clrfix">
+                <a href="http://www.vincecamuto.com"><div class="c-brandLogo {activeBrandClass}"></div></a>
+                <span></span>
+            </div>
+            <div class="c-myBag {myBag.cartClassName}">{myBag.cart|s}</div>
+        </div>
+        <div class="c-brandNav">
+            <ul>
+                <li class="c-homeLink">
+                    <a href="{homeLink}">{@translate key="home"/}</a>
+                </li>
+                {brandNav}
+            </ul>
+        </div>
+    </header>
+    <div class="c-overlay"></div>
+{/header}
